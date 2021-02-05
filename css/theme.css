@@ -25,7 +25,6 @@
 [data-md-color-primary=indigo] .md-nav__link--active, [data-md-color-primary=indigo] .md-nav__link:active {
     color: black;
     background-color: #d3d3d3;
-    padding: 2px;
 }
 
 /*Coloring of top bar*/
@@ -88,11 +87,13 @@
 }
 
 /*anchor offset*/
-.anchor:before {
-    content:"";
-    display:block;
-    height:130px; /* fixed header height*/
-    margin:-130px 0 0; /* negative fixed header height */
+
+td {position: relative;}
+
+.anchor {
+   position: absolute;
+   top: 0px;
+   margin: -4.8rem 0 0; /* negative fixed header height */
 }
 
 /*prevent left/right scrollbar
@@ -104,4 +105,23 @@ disabled due to lack of need currently, but works*/
 /*Make lines across pages solid*/
 .md-typeset hr {
     border-bottom: .1rem solid rgba(0,0,0,.26);
+}
+
+.custom-line {
+    border:0;
+    height:0;
+    border-top:1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.custom-link {
+    color:#f4641d;
+    position:relative;
+    left:1.3rem;
+    top:-0.5rem;
+}
+
+code {
+    white-space: nowrap;
 }
